@@ -1,1 +1,25 @@
 <p>home-category works!</p>
+
+<div>
+	<form action=" " [formGroup]="formLogin" (submit)="send()">
+		<div>
+			<label for="email" type="text"> Email</label>
+			<input id="email" formControlName="email" />
+		</div>
+		<div>
+			<label for="password" type="text"> Password</label>
+			<input id="password" formControlName="password" />
+		</div>
+		<div>
+			<input type="checkbox" id="terms" formControlName="terms" />
+		</div>
+		<div>
+			<button [disabled]="formLogin.invalid">Send</button>
+		</div>
+
+	</form>
+
+	<div>
+		Valido:{{formLogin.valid}}
+	</div>
+</div>
